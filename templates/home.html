@@ -4,7 +4,10 @@
 {% block content %}
 <h1>HELLO {{name}}!</h1>
 
-<form action="add">
+<form action="add" method="post">
+    <!--csrf attack prevention token-->
+    {% csrf_token %}
+    <!--form -->
     Enter 1st number : <input type="text" name="num1"><br>
     Enter 2nd number : <input type="text" name="num2"><br>
     <input type="submit">

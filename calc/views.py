@@ -10,9 +10,9 @@ def home(request):
 #add function
 def add(request):
     #fetch the values
-    val1=int(request.GET['num1'])
-    val2=int(request.GET['num2'])
-
+    val1=int(request.POST['num1'])
+    val2=int(request.POST['num2'])
+    #calculate result
     res = val1+val2
     #render result.html 
     return render(request,'result.html',{'result':res})
