@@ -2,6 +2,7 @@ from django.shortcuts import render
 #httprespose
 from django.http import HttpResponse
 
-#home function
+#home function -inital path
 def home(request):
-    return HttpResponse('Hello World!!')
+    #render home.html in the template folder
+    return render(request,'home.html')
